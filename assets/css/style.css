@@ -253,6 +253,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-image: url("https://as2.ftcdn.net/v2/jpg/05/16/30/33/1000_F_516303394_IbKPGlHHpa0TaxwcwhR5o6kBvflgtUlA.jpg");
+  /* background-image: url("../img/banner.png"); */
   padding: 0 80px;
   display: flex;
   flex-direction: column;
@@ -990,3 +991,29 @@ footer .copyright {
   cursor: pointer;
 }
 
+.discounted-products .pro-container .pro .deal {
+  position: absolute;
+  top: 5px;
+  left: -7px;
+  background-color: #ff4d4f;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 10px 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+.discounted-products .pro .des .pro__price h4:nth-child(1) {
+  color: #818ea0 !important;
+  text-decoration: line-through;
+}
+
+.reduced_price {
+  margin-left: 8px;
+}
+
+/* .discounted-products .pro-container .pro .des .pro__price .reduced-price {
+  margin-left: 20px;
+} */

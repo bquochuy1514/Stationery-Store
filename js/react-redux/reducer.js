@@ -13,7 +13,8 @@ const actions = {
         })
         if(index !== -1) {
             console.log('trung` san pham')
-            products[index].quantity += quantity
+            const pricee = parseInt(products[index].quantity) + parseInt(quantity)
+            products[index].quantity = pricee
             storage.set(products)
         }
         else {

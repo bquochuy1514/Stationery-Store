@@ -10,7 +10,7 @@ localStorage.setItem('featuredProducts', JSON.stringify(
     [
         {
             name: "Sổ còng B5 Dash-Caro-lined 100 tờ 100gsm",
-            image: "../../../assets/img/productImages/socong1.1.webp",
+            image: "../assets/img/productImages/socong1.1.webp",
             price: 58000,
             quantity: 1,
             desc: `
@@ -33,7 +33,7 @@ localStorage.setItem('featuredProducts', JSON.stringify(
         },
         {
             name: "Sổ còng sắt Caro (6x6)mm nét đứt A4 100 tờ 100/76",
-            image: "../../../assets/img/productImages/socong2.1.webp",
+            image: "../assets/img/productImages/socong2.1.webp",
             price: 97000,
             quantity: 1,
             desc: `Sổ còng sắt Caro (6x6)mm nét đứt KLONGA4 100 tờ 100/76; MS: 522
@@ -52,7 +52,7 @@ localStorage.setItem('featuredProducts', JSON.stringify(
         },
         {
             name: "Sổ lò xo A5 ruột kẻ ngang 200 trang, phù hợp ghi chép",
-            image: "../../../assets/img/productImages/socong3.1.webp",
+            image: "../assets/img/productImages/socong3.1.webp",
             price: 20000,
             quantity: 1,
             desc: `
@@ -72,7 +72,7 @@ localStorage.setItem('featuredProducts', JSON.stringify(
         },
         {
             name: "Bút xóa kéo thiết kế hình bàn chân mèo đáng yêu",
-            image: "../../../assets/img/productImages/butxoakeo2.1.webp",
+            image: "../assets/img/productImages/butxoakeo2.1.webp",
             price: 112000,
             quantity: 1,
             desc: `
@@ -84,7 +84,7 @@ localStorage.setItem('featuredProducts', JSON.stringify(
         }, 
         {
             name: "M&G Bút Xoá Nước Cute 8/12/18ml Viết Xóa Dụng Cụ Tẩy Xoá 1 Cái Đồ Sinh Viên Màu Ngẫu Nhiên T6072",
-            image: "../../../assets/img/productImages/butxoanuoc1.1.webp",
+            image: "../assets/img/productImages/butxoanuoc1.1.webp",
             price: 12000,
             quantity: 1,
             desc: `
@@ -100,7 +100,7 @@ localStorage.setItem('featuredProducts', JSON.stringify(
         },
         {
             name: "Cục Tẩy 4b Bằng Cao Su",
-            image: "../../../assets/img/productImages/tay1.1.webp",
+            image: "../assets/img/productImages/tay1.1.webp",
             price: 5000,
             quantity: 1,
             desc: `
@@ -116,14 +116,14 @@ localStorage.setItem('featuredProducts', JSON.stringify(
         },
         {
             name: "Bút highlight màu SR035",
-            image: "../../../assets/img/productImages/buthighlight1.webp",
+            image: "../assets/img/productImages/buthighlight1.webp",
             price: 26000,
             quantity: 1,
             desc: `-Ngồi viết: 1-4mm -Kích thước gói: 13x12cm -Trọng lượng gói: 8g`
         },
         {
             name: "Bút highlight pastel ",
-            image: "../../../assets/img/productImages/buthighlight2.webp",
+            image: "../assets/img/productImages/buthighlight2.webp",
             price: 53000,
             quantity: 1,
             desc: ` 
@@ -134,7 +134,7 @@ localStorage.setItem('featuredProducts', JSON.stringify(
         },
         {
             name: "Bút Đánh Dấu Dạ Quang Có Nhũ Lấp Lánh Rosy Posy Cameo Shell",
-            image: "../../../assets/img/productImages/buthighlight3.webp",
+            image: "../assets/img/productImages/buthighlight3.webp",
             price: 85000,
             quantity: 1,
             desc: ` 
@@ -146,7 +146,7 @@ localStorage.setItem('featuredProducts', JSON.stringify(
         },
         {
             name: "Bút chì kim/ruột ngòi to 2.0mm",
-            image: "../../../assets/img/productImages/butchikimruot1.webp",
+            image: "../assets/img/productImages/butchikimruot1.webp",
             price: 5000,
             quantity: 1,
             desc: ` 
@@ -158,7 +158,7 @@ localStorage.setItem('featuredProducts', JSON.stringify(
         },
         {
             name: "Bút Chì Kim Bấm + 2 Hộp Ruột Ngòi 0.5 & 0.7mm CREAM RosyPosy",
-            image: "../../../assets/img/productImages/butchikimruot2.webp",
+            image: "../assets/img/productImages/butchikimruot2.webp",
             price: 25000,
             quantity: 1,
             desc: ` 
@@ -168,7 +168,7 @@ localStorage.setItem('featuredProducts', JSON.stringify(
         },
         {
             name: "Set bút chì kim panda gấu trúc tặng ruột chì kim LILA BUTCHIKIMCAPY26",
-            image: "../../../assets/img/productImages/butchikim_chiruot3.webp",
+            image: "../assets/img/productImages/butchikim_chiruot3.webp",
             price: 17500,
             quantity: 1,
             desc: `
@@ -177,7 +177,7 @@ localStorage.setItem('featuredProducts', JSON.stringify(
         },
         {
             name: "Bút bi Gel SenCoo",
-            image: "../../../assets/img/productImages/71woLrkWvVL._AC_SL1001_.jpg",
+            image: "../assets/img/productImages/71woLrkWvVL._AC_SL1001_.jpg",
             price: 21000,
             quantity: 1,
             desc: `
@@ -194,7 +194,7 @@ localStorage.setItem('featuredProducts', JSON.stringify(
         },
         {
             name: "Bút bi Gel Fiover",
-            image: "../../../assets/img/productImages/61RlF--KWWL._AC_SL1500_.jpg",
+            image: "../assets/img/productImages/61RlF--KWWL._AC_SL1500_.jpg",
             price: 25000,
             quantity: 1,
             desc: `
@@ -211,7 +211,7 @@ localStorage.setItem('featuredProducts', JSON.stringify(
         },
         {
             name: "Bút bi nhấn Muji",
-            image: "../../../assets/img/productImages/7acf6b55516f3ca40b1e0963578ab279_1.jpg",
+            image: "../assets/img/productImages/7acf6b55516f3ca40b1e0963578ab279_1.jpg",
             price: 20000,
             quantity: 1,
             desc: `
@@ -223,7 +223,7 @@ localStorage.setItem('featuredProducts', JSON.stringify(
         },
         {
             name: "Ruột bút bi gel Sencoo",
-            image: "../../../assets/img/productImages/41XH9XGKhZL._AC_.jpg",
+            image: "../assets/img/productImages/41XH9XGKhZL._AC_.jpg",
             price: 8000,
             quantity: 1,
             desc: `
@@ -234,7 +234,7 @@ localStorage.setItem('featuredProducts', JSON.stringify(
         },
         {
             name: "Ruột bút bi nhấn Muji",
-            image: "../../../assets/img/productImages/4550002822873_org.jpg",
+            image: "../assets/img/productImages/4550002822873_org.jpg",
             price: 10000,
             quantity: 1,
             desc: `
@@ -245,7 +245,7 @@ localStorage.setItem('featuredProducts', JSON.stringify(
         },
         {
             name: "Sổ lò xo Classmate",
-            image: "../../../assets/img/productImages/sotayloxoclassmate.webp",
+            image: "../assets/img/productImages/sotayloxoclassmate.webp",
             price: 46000,
             quantity: 1,
             desc: `
@@ -254,7 +254,7 @@ localStorage.setItem('featuredProducts', JSON.stringify(
         },
         {
             name: "Sổ tay bìa da",
-            image: "../../../assets/img/productImages/sotaybiada1.webp",
+            image: "../assets/img/productImages/sotaybiada1.webp",
             price: 59000,
             quantity: 1,
             desc: `
@@ -263,7 +263,7 @@ localStorage.setItem('featuredProducts', JSON.stringify(
         },
         {
             name: "Sổ Klong dash caro line",
-            image: "../../../assets/img/productImages/socaro01.webp",
+            image: "../assets/img/productImages/socaro01.webp",
             price: 24000,
             quantity: 1,
             desc: `
@@ -272,7 +272,7 @@ localStorage.setItem('featuredProducts', JSON.stringify(
         },
         {
             name: "Giấy note pastel",
-            image: "../../../assets/img/productImages/pastel1.webp",
+            image: "../assets/img/productImages/pastel1.webp",
             price: 10000,
             quantity: 1,
             desc: `
@@ -285,7 +285,7 @@ localStorage.setItem('featuredProducts', JSON.stringify(
         },
         {
             name: "Giấy note vuông trơn",
-            image: "../../../assets/img/productImages/vuongtron1.webp",
+            image: "../assets/img/productImages/vuongtron1.webp",
             price: 8000,
             quantity: 1,
             desc: `
@@ -300,7 +300,7 @@ localStorage.setItem('featuredProducts', JSON.stringify(
         },
         {
             name: "Giấy note trong suốt ",
-            image: "../../../assets/img/productImages/notetrongsuot1.webp",
+            image: "../assets/img/productImages/notetrongsuot1.webp",
             price: 6000,
             quantity: 1,
             desc: `
@@ -315,7 +315,7 @@ localStorage.setItem('featuredProducts', JSON.stringify(
         },
         {
             name: "Bút highlight pastel ",
-            image: "../../../assets/img/productImages/buthighlight2.webp",
+            image: "../assets/img/productImages/buthighlight2.webp",
             price: 53000,
             quantity: 1,
             desc: ` 

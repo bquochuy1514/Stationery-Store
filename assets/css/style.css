@@ -1,0 +1,1031 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Global Styles */
+
+h1 {
+  font-size: 50px;
+  line-height: 64px;
+  color: #222;
+}
+
+h2 {
+  font-size: 46px;
+  line-height: 54px;
+  color: #222;
+}
+
+h4 {
+  font-size: 20px;
+  color: #222;
+}
+
+h6 {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+p {
+  font-size: 16px;
+  color: #465b52;
+  margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+  padding: 40px 80px;
+}
+
+.section-m1 {
+  margin: 40px 0;
+}
+
+button.normal {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 15px 30px;
+  color: #000;
+  background-color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  transition: 0.2s;
+}
+
+button.white {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 11px 18px;
+  color: #fff;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  border: 1px solid #fff;
+  transition: 0.2s;
+}
+
+body {
+  width: 100%;
+}
+
+/* ===================================== */
+/* Header Start */
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 80px;
+  height: 92px;
+  background: #e3e6f3;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.users {
+  width: 35px;
+  cursor: pointer;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.navbar__users {
+  display: none;
+  cursor:default;
+  width: 150px;
+  background-color: #088178;
+  position: absolute;
+  top: 45px;
+  right: 0;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  animation: growth 0.2s linear;
+  transform-origin: 80% -10%;
+}
+
+.navbar__users ul {
+  width: 100%;
+  padding: 10px 10px;
+  font-size: 14px;
+  display: inline-block;
+  color: #fff;
+}
+
+.navbar__users ul li {
+  padding: 0 !important;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.navbar__users ul li:hover {
+  color: #333;
+}
+
+.navbar__users ul li:last-child {
+  margin-bottom: 15px;
+}
+
+#navbar li:nth-child(7) {
+  cursor: pointer;
+}
+
+#navbar li:nth-child(7)::before {
+  content: "";
+  display: none;
+  position: absolute;
+  border-width: 20px 20px;
+  border-style: solid;
+  border-color: transparent transparent #088178 transparent;
+  top: 15px;
+  right: 15px;
+  animation: growth 0.2s ease;
+  transform-origin: top;
+}
+
+#navbar li:nth-child(7)::after {
+  content: "";
+  display: none;
+  position: absolute;
+  border-style: solid;
+  border-width: 20px 50px;
+  border-color: transparent;
+  top: 15px;
+  right: 0px;
+  animation: growth 0.2s ease;
+  transform-origin: top;
+}
+
+#navbar li:nth-child(7):hover .navbar__users,
+#navbar li:nth-child(7):hover::before,
+#navbar li:nth-child(7):hover:after
+{
+  display: block;
+}
+
+@keyframes growth {
+  from {
+    transform: scale(0);
+  }
+  to{
+    transform: scale(1);
+  }
+}
+
+.logo {
+  height: 82px;
+  object-fit: contain;
+}
+
+#header .logo {
+  width: 100%;
+}
+
+footer .logo {
+  margin-bottom: 30px;
+}
+
+#header a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  height: 100%;
+}
+
+#header a p {
+  margin: 0;
+  margin-left: -25px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#navbar li {
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
+}
+
+#navbar li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+  color: #088178;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+  content: "";
+  width: 30%;
+  height: 3px;
+  background: #088178;
+  position: absolute;
+  bottom: -4px;
+  left: 19px;
+}
+
+#navbar li .none:hover::after {
+  content: none;
+}
+
+/* Home Page */
+#hero {
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-image: url("../img/banner.png");
+  /* background-image: url("../img/banner.png"); */
+  padding: 0 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+#hero h4 {
+  padding-bottom: 15px;
+}
+
+#hero h1 {
+  color: #088178;
+}
+
+#hero button {
+  background-image: url("../img/button.png");
+  background-color: transparent;
+  background-repeat: no-repeat;
+  color: #088178;
+  cursor: pointer;
+  border: 0;
+  padding: 14px 80px 14px 65px;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+#hero button:hover {
+  transform: scale(1.1);
+}
+
+#feature .feature__container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#feature .feature__title {
+  text-align: center;
+}
+
+#feature .feature__sub {
+  text-align: center;
+}
+
+#feature .fe-box {
+  width: 180px;
+  cursor: pointer;
+  text-align: center;
+  padding: 25px 15px;
+  box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+  border: 1px solid #cce7d0;
+  border-radius: 4px;
+  margin: 15px 0;
+}
+
+#feature .fe-box:hover {
+  box-shadow: 10px 10px 54px rgba(70, 62, 221, 0.1);
+}
+
+#feature .fe-box img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#feature .fe-box h6 {
+  display: inline-block;
+  padding: 9px 8px 6px 8px;
+  line-height: 1;
+  border-radius: 4px;
+  color: #088178;
+  background-color: #fddde4;
+}
+
+#feature .fe-box:nth-child(2) h6 {
+  background-color: #cdebbc;
+}
+#feature .fe-box:nth-child(3) h6 {
+  background-color: #d1e8f2;
+}
+#feature .fe-box:nth-child(4) h6 {
+  background-color: #cdd4f8;
+}
+#feature .fe-box:nth-child(5) h6 {
+  background-color: #f6dbf6;
+}
+#feature .fe-box:nth-child(6) h6 {
+  background-color: #fff2e5;
+}
+
+#product1 .pro-container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  flex-wrap: wrap;
+}
+
+#toast {
+  display: inline-block;
+  position: fixed;
+  right: 30px;
+  top: 60px;
+}
+
+.toast {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 2px;
+  border-left: 4px solid #16c516;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
+  padding: 20px 0;
+  animation: slideInLeft 0.4s ease, fadeOut linear 1s 3s forwards;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(calc(100% + 150px));
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+
+.toast__icon,
+.toast__close {
+  font-size: 24px;
+  padding: 0 16px;
+}
+
+.toast__close {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.toast__close:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.toast__icon {
+  color: #16c516;
+}
+
+.toast__body {
+  display: flex;
+  flex-direction: column;
+}
+
+.toast__title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.toast__msg {
+  font-size: 16px;
+  color: #888;
+  font-weight: 500;
+  margin: 0;
+  margin-top: 4px;
+}
+
+
+#product1 {
+  position: relative;
+  text-align: center;
+}
+
+#product1 h2 {
+  margin-top: 20px;
+}
+
+#product1 .pro {
+  position: relative;
+  width: 23%;
+  min-height: 250px;
+  padding: 10px 12px;
+  border: 1px solid #cce7d0;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.05);
+  margin: 15px 0;
+  transition: 0.2s ease;
+  background: #f9faff;
+}
+
+#product1 .pro:hover {
+  transform: scale(1.01);
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.1);
+}
+
+#product1 .pro img {
+  height: 260px;
+  width: 100%;
+  border-radius: 20px;
+}
+
+#product1 .pro .des {
+  text-align: start;
+  padding: 10px 0;
+}
+
+#product1 .pro .des span {
+  color: #606063;
+  font-size: 12px;
+}
+
+#product1 .pro .des h5 {
+  padding-top: 7px;
+  color: #1a1a1a;
+  font-size: 14px;
+  white-space: nowrap;        /* Không cho xuống dòng */
+  overflow: hidden;          /* Ẩn phần nội dung thừa */
+  text-overflow: ellipsis;
+}
+
+#product1 .pro .des i {
+  font-size: 12px;
+  color: gold;
+}
+
+#product1 .pro .des h4 {
+  padding-top: 7px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #088178;
+}
+
+#product1 .pro .des .pro__price span {
+  padding-top: 7px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #088178;
+}
+
+.pro__price {
+  display: flex;
+}
+
+#product1 .pro .cart {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50px;
+  background-color: #e8f6ea;
+  color: #088178;
+  border: 1px solid #cce7d0;
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+}
+#product1 .pro .cart:hover {
+  transform: scale(1.2);
+}
+
+#banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url("https://img.pikbest.com/backgrounds/20180731/blue-fresh-school-season-stationery-banner-background_1839401.jpg!sw800");
+  width: 100%;
+  height: 40vh;
+  background-size: contain;
+  background-position: bottom;
+}
+
+#banner h4 {
+  color: #333;
+  font-size: 16px;
+}
+
+#banner h2 {
+  color: #333;
+  font-size: 30px;
+  padding: 10px 0;
+}
+
+#banner h2 span {
+  color: red;
+  font-size: 30px;
+  padding: 10px 0;
+}
+
+#banner button:hover {
+  background: #088178;
+  color: #fff;
+}
+
+#sm-banner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#sm-banner .banner-box {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-image: url("https://img.freepik.com/premium-vector/back-toschool-inscription-school-stationery-elements-table_95169-788.jpg?w=740");
+  min-width: 650px;
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  padding: 30px;
+}
+
+#sm-banner .banner-box.banner-box2 {
+    background-image: url("https://img.freepik.com/premium-photo/banner-shopping-cart-with-school-supply-o_117406-243.jpg?w=1060");
+}
+
+#sm-banner h4 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+#sm-banner h2 {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+#sm-banner span {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  padding-bottom: 15px;
+}
+
+#sm-banner .banner-box:hover button {
+  background: #088178;
+  border: 1px solid #088178;
+}
+
+#banner3 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 80px;
+}
+
+#banner3 .banner-box {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-image: url("https://img.freepik.com/free-photo/front-view-back-school-stationery-with-pencils-medical-mask_23-2148587567.jpg?t=st=1733563576~exp=1733567176~hmac=f337dde6d56726aa82d3b83e90089e4b2247284d5f4c775520d479c80fa33cec&w=740");
+  min-width: 30%;
+  height: 30vh;
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+#banner3 .banner-box h2 {
+  color: #fff;
+  font-weight: 900;
+  font-size: 22px;
+}
+
+#banner3 .banner-box h3 {
+  color: #ec544e;
+  font-weight: 800;
+  font-size: 15px;
+}
+
+#banner3 .banner-box.banner-box2 {
+  background-image: url("https://img.freepik.com/free-photo/back-school-concept-with-various-supplies_23-2149557604.jpg?t=st=1733563905~exp=1733567505~hmac=3ee518d40cde26fb7d709bd724d352039812acd6705b6185b63affa7a5aa5ff9&w=360");
+}
+
+#banner3 .banner-box.banner-box3 {
+  background-image: url("https://img.freepik.com/free-photo/sketchbook-office-supplies_23-2147689744.jpg?t=st=1733563975~exp=1733567575~hmac=837e4b9a174573c0080adc4ad3e0be89d6a8bfb4c0a599a0981eb606939c454b&w=740");
+}
+
+#newsletter {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: 20% 30%;
+  background-color: #041e42;
+}
+
+#newsletter h4 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+}
+
+#newsletter p {
+  font-size: 14px;
+  font-weight: 600;
+  color: #818ea0;
+}
+
+#newsletter p span {
+  color: #ffbd27;
+}
+
+#newsletter .form {
+  display: flex;
+  width: 40%;
+}
+
+#newsletter input {
+  height: 3.125rem;
+  padding: 0 1.25em;
+  font-size: 14px;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  outline: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+#newsletter button {
+  background-color: #088178;
+  color: #fff;
+  white-space: nowrap;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+} 
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+footer .col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+footer h4 {
+  font-size: 14px;
+  padding-bottom: 20px;
+}
+
+footer p {
+  font-size: 13px;
+  margin: 0 0 8px 0;
+}
+
+footer a {
+  font-size: 13px;
+  text-decoration: none;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+footer .follow {
+  margin-top: 20px;
+}
+
+footer .follow i {
+  color: #465b52;
+  padding-right: 4px;
+  cursor: pointer;
+}
+
+footer .install .row img {
+  border: 1px solid #088178;
+  border-radius: 6px;
+}
+
+footer .install img {
+  margin: 10px 0 15px 0;
+}
+
+footer .follow i:hover,
+footer a:hover {
+  color: #088178;
+}
+
+footer .copyright {
+  width: 100%;
+  text-align: center;
+}
+
+/* Shop Page */
+#page-header {
+  background-image: url("https://img.freepik.com/free-photo/flat-lay-school-essentials-with-calculator-stapler_23-2148587206.jpg?t=st=1733640965~exp=1733644565~hmac=1dd020bc74ef1229de8d0f680c423b5aba3ad220b399d4dcfd822f2675aeaff9&w=1380");
+  width: 100%;
+  height: 40vh;
+  background-size: cover;
+  background-position: bottom;
+  display: flex;
+  justify-content: center;
+  margin-top: 90px;
+  text-align: center;
+  flex-direction: column;
+  padding: 14px;
+}
+
+#page-header p,
+#page-header h2 {
+  color: #fff;
+}
+
+#pagination {
+  text-align: center;
+}
+
+#pagination a {
+  text-decoration: none;
+  background-color: #088178;
+  padding: 15px 20px;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 600;
+}
+
+#pagination a i {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Single Product */
+
+#prodetails {
+  display: flex;
+  margin-top: 110px;
+
+}
+
+#prodetails .single-pro-image {
+  width: 40%;
+  margin-right: 50px;
+}
+
+#MainImg {
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  height: 488px;
+  width: 100%;
+}
+
+#prodetails .single-pro-details {
+  width: 50%;
+  padding-top: 30px;
+}
+
+#prodetails .single-pro-details h4 {
+  padding: 40px 0 0 0;
+}
+
+#prodetails .single-pro-details h2 {
+  font-size: 26px;
+}
+
+#prodetails .single-pro-details__wrapper {
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+
+#prodetails .single-pro-details h6 {
+  color: #818ea0;
+  font-size: 16px;
+}
+
+#prodetails .single-pro-details input {
+  width: 50px;
+  height: 47px;
+  padding-left: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+#prodetails .single-pro-details input:focus {
+  outline: none;
+}
+
+#prodetails .single-pro-details button {
+  background: #088178;
+  color: #fff;
+}
+
+#prodetails .single-pro-details button:hover {
+  background: #fff;
+  color: #088178;
+  border: 1px solid #088178;
+}
+
+#prodetails .single-pro-details span {
+  line-height: 25px;
+}
+
+/* Cart Page */
+#cart table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  white-space: nowrap;
+}
+
+#cart table img {
+  width: 80px;
+  height: 82px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+#cart table td:nth-child(1) {
+  width: 100px;
+  text-align: center;
+}
+
+#cart table td:nth-child(2) {
+  width: 150px;
+  text-align: center;
+}
+
+#cart table td:nth-child(3) {
+  width: 250px;
+  text-align: center;
+}
+
+#cart table td:nth-child(4),
+#cart table td:nth-child(5),
+#cart table td:nth-child(6)
+{
+  width: 150px;
+  text-align: center;
+}
+
+#cart table td:nth-child(5) input {
+  width: 70px;
+  padding: 10px 5px 10px 15px;
+}
+
+#cart table thead {
+  border: 1px solid #e2e9e1;
+  border-left: none;
+  border-right: none;
+}
+
+#cart table thead td {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 13px;
+  padding: 18px 0;
+}
+
+#cart table tbody tr td {
+  padding-top: 15px;
+}
+
+#cart table tbody td {
+  font-size: 13px;
+  white-space: nowrap;        /* Không cho xuống dòng */
+  overflow: hidden;          /* Ẩn phần nội dung thừa */
+  text-overflow: ellipsis;
+}
+
+#cart table tbody td i {
+  color: #333;
+  font-size: 16px;
+}
+
+#cart table tbody td i:hover {
+  color: #088178;
+}
+
+#cart-add {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#coupon {
+  width: 50%;
+  margin-bottom: 30px;
+}
+
+#coupon h3,
+#subtotal h3 {
+  padding-bottom: 15px;
+}
+
+#coupon input {
+  padding: 10px 20px;
+  outline: none;
+  width: 60%;
+  margin-right: 10px;
+  border: 1px solid #e2e9e1;
+}
+
+#coupon button,
+#subtotal button {
+  background: #088178;
+  color: #fff;
+  padding: 12px 20px;
+}
+
+#subtotal {
+  width: 50%;
+  margin-bottom: 30px;
+  border: 1px solid #e2e9e1;
+  padding: 30px;
+}
+
+#subtotal table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#subtotal table td {
+  width: 50%;
+  border: 1px solid #e2e9e1;
+  padding: 10px;
+  font-size: 13px;
+}
+
+.react-redux-wrapper .cart__details i {
+  cursor: pointer;
+}
+
+.discounted-products .pro-container .pro .deal {
+  position: absolute;
+  top: 5px;
+  left: -7px;
+  background-color: #ff4d4f;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 10px 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+.discounted-products .pro .des .pro__price h4:nth-child(1) {
+  color: #818ea0 !important;
+  text-decoration: line-through;
+}
+
+.reduced_price {
+  margin-left: 8px;
+}
+
+.addFeaturedProduct {
+  width: 50px;
+  height: 50px;
+}
+
+/* .discounted-products .pro-container .pro .des .pro__price .reduced-price {
+  margin-left: 20px;
+} */

@@ -3,7 +3,9 @@ import storage from "./util/storage.js";
 
 const init = {
     products: storage.get('PRODUCTS'),
-    featuredProducts: storage.get('featuredProducts')
+    featuredProducts: storage.get('featuredProducts'),
+    totalSaved: storage.get('totalSaved'),
+    hasAppliedCoupon: false,
 };
 
 localStorage.setItem('featuredProducts', JSON.stringify(
@@ -349,11 +351,24 @@ const actions = {
         }
     },
 
-    changeQuantity({products}, args) {
-        console.log(args)
+    changeQuantity(state, args) {
+        const {products} = state
         const {index, value} = args
         products[index].quantity = value
         storage.set('PRODUCTS', products)
+
+        // Tính toán lại tổng tiền tiết kiệm
+        const newTotalSaved = state.hasAppliedCoupon ? products.reduce((acc, product) => {
+            const originalTotal = product.price * product.quantity;
+            const discountedTotal = Math.round(product.price * 0.7) * product.quantity;
+            return acc + (originalTotal - discountedTotal);
+        }, 0) : state.totalSaved;
+        
+        return {
+            ...state,
+            totalSaved: newTotalSaved,
+            hasAppliedCoupon: true
+        }
     },
     
     remove({products}, index) {
@@ -371,13 +386,32 @@ const actions = {
             image,
             desc,
         }))
+    },
+    applyCoupon(state) {
+        const { products} = state
+        const newTotalSaved = products.reduce((acc, product) => {
+            const originalTotal = product.price * product.quantity;
+            const discountedTotal = Math.round(product.price * 0.7) * product.quantity;
+            return acc + (originalTotal - discountedTotal);
+        }, 0);
+
+        return {
+            ...state,
+            totalSaved: newTotalSaved,
+            hasAppliedCoupon: true
+        };
     }
 };
 
 export default function reducer(state = init, action, args) {
-    actions[action] && actions[action](state, ...args);
+    if (actions[action]) {
+        const result = actions[action](state, ...args);
+        return result || state;
+    }
     return state;
 }
+
+
 
 // localStorage.setItem('PRODUCTS', JSON.stringify(
 //     [

@@ -33,3 +33,23 @@ changeQuantityProducts()
 window.changeQuantityProducts = changeQuantityProducts
 
 export default changeQuantityProducts;
+
+//Handle when apply coupon
+function applyCoupon() {
+    const couponInput = $('#coupon input')
+    const couponBtn = $('#coupon button')
+    const couponCode = 'TRAIDEPBANBUT'
+
+    couponBtn.addEventListener('click', (e) => {
+        const coupon = couponInput.value
+        if (coupon === couponCode) {
+            dispatch('applyCoupon')
+        } else {
+            alert('Invalid coupon code')
+        }
+    })
+}
+
+applyCoupon()
+
+

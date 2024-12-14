@@ -1,6 +1,7 @@
 
 import handleAddProducts from "../index.js"
 
+const $ = document.querySelector.bind(document)
 const $$ = document.querySelectorAll.bind(document)
 function changeQuantityProducts() {
     const quantityInputs = $$('.react-redux-wrapper #cart tbody td input')
@@ -45,6 +46,21 @@ export default function html([first, ...strings], ...values) {
     .join('')
 }
 
+function applyCoupon() {
+    const couponInput = $('#coupon input')
+    const couponBtn = $('#coupon button')
+    const couponCode = 'TRAIDEPBANBUT'
+
+    couponBtn.addEventListener('click', (e) => {
+        const coupon = couponInput.value
+        if (coupon === couponCode) {
+            dispatch('applyCoupon')
+        } else {
+            alert('Invalid coupon code')
+        }
+    })
+}
+
 export function createStore(reducer) {
     let state = reducer()
     const roots = new Map()
@@ -71,6 +87,7 @@ export function createStore(reducer) {
             handleAddProducts()
             handleClickProduct()
             changeQuantityProducts()
+            applyCoupon()
         }
     }
 }

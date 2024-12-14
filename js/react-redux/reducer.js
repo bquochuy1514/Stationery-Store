@@ -367,7 +367,7 @@ const actions = {
         return {
             ...state,
             totalSaved: newTotalSaved,
-            hasAppliedCoupon: true
+            hasAppliedCoupon: state.hasAppliedCoupon
         }
     },
     

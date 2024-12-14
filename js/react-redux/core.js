@@ -51,14 +51,16 @@ function applyCoupon() {
     const couponBtn = $('#coupon button')
     const couponCode = 'TRAIDEPBANBUT'
 
-    couponBtn.addEventListener('click', (e) => {
-        const coupon = couponInput.value
-        if (coupon === couponCode) {
-            dispatch('applyCoupon')
-        } else {
-            alert('Invalid coupon code')
-        }
-    })
+    if(couponBtn) {
+        couponBtn.addEventListener('click', (e) => {
+            const coupon = couponInput.value
+            if (coupon === couponCode) {
+                dispatch('applyCoupon')
+            } else {
+                alert('Invalid coupon code')
+            }
+        })
+    }
 }
 
 export function createStore(reducer) {
